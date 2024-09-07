@@ -5,8 +5,16 @@ class SkyscrapersImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Image(
-      image: AssetImage('images/Skyscrapers.png'),
+    // Get screen size using MediaQuery
+    final screenSize = MediaQuery.of(context).size;
+
+    return SizedBox(
+      width: screenSize.width,
+      height: screenSize.height, // Make the image fill the entire screen height
+      child: Image.asset(
+        'images/Skyscrapers.png',
+        fit: BoxFit.cover, // Make the image cover the entire container
+      ),
     );
   }
 }

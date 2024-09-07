@@ -1,3 +1,4 @@
+// main.dart
 import 'package:flutter/material.dart';
 import 'widgets/submarine_image.dart';
 import 'widgets/skyscrapers_image.dart';
@@ -11,16 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SubmarineImage(),
-              SkyscrapersImage(),
-            ],
-          ),
+        body: Stack(
+          children: [
+            Center(
+              child: SkyscrapersImage(),
+            ),
+            SubmarineImage(),
+          ],
         ),
       ),
     );

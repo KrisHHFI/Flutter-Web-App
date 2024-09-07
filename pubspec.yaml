@@ -63,6 +63,8 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
+    - images/Skyscrapers.png   
+    # Credit: Pexels, Charles Parker, Glowing skyscrapers of megalopolis on shore of river
     - images/SubmarineLightsOff.png   
     - images/SubmarineLightsOn.png   
     

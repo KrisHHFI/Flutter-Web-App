@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'widgets/submarine_image.dart';
+import 'widgets/skyscrapers_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,24 +13,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('My Blank App'),
-        ),
         body: const Center(
-          child: SubmarineImage(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SubmarineImage(),
+              SkyscrapersImage(),
+            ],
+          ),
         ),
       ),
-    );
-  }
-}
-
-class SubmarineImage extends StatelessWidget {
-  const SubmarineImage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Image(
-      image: AssetImage('images/SubmarineLightsOff.png'),
     );
   }
 }

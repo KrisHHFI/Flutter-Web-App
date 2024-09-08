@@ -7,11 +7,8 @@ class SingleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final componentWidth = screenWidth * 0.5;
-
     return SizedBox(
-      width: componentWidth,
+      width: 500,
       child: Center(
         child: Text(
           text,

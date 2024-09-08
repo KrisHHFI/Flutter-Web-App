@@ -4,54 +4,94 @@ class SingleTextList extends StatelessWidget {
   final String text1;
   final String text2;
   final String text3;
-  final Color textColor; // Optional color for the text
+  final Color textColor;
 
   const SingleTextList({
     super.key,
     required this.text1,
     required this.text2,
     required this.text3,
-    this.textColor = Colors.black, // Default text color is black
+    this.textColor = Colors.black,
   });
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final componentWidth = screenWidth * 0.3; // 50vw
-
     return Center(
-      child: Container(
-        width: componentWidth,
-        color: Colors.cyan, // Cyan background color
+      child: SizedBox(
+        width: 400,
         child: Column(
-          crossAxisAlignment:
-              CrossAxisAlignment.start, // Align text to the start
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              text1,
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: textColor, // Apply the text color
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: '1. ',
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: textColor,
+                    ),
+                  ),
+                  TextSpan(
+                    text: text1,
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: textColor,
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 16), // Add spacing between texts
-            Text(
-              text2,
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: textColor, // Apply the text color
+            const SizedBox(height: 16),
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: '2. ',
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: textColor,
+                    ),
+                  ),
+                  TextSpan(
+                    text: text2,
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: textColor,
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 16), // Add spacing between texts
-            Text(
-              text3,
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: textColor, // Apply the text color
+            const SizedBox(height: 16),
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: '3. ',
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: textColor,
+                    ),
+                  ),
+                  TextSpan(
+                    text: text3,
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: textColor,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

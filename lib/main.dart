@@ -1,6 +1,6 @@
 // main.dart
 import 'package:flutter/material.dart';
-import 'widgets/submarine_image.dart';
+import 'widgets/page_container.dart';
 import 'widgets/skyscrapers_image.dart';
 
 void main() {
@@ -14,13 +14,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Stack(
-          children: [
-            Center(
-              child: SkyscrapersImage(),
-            ),
-            SubmarineImage(),
-          ],
+        body: SingleChildScrollView(
+          // Allow vertical scrolling
+          child: Column(
+            // Stack the containers vertically
+            children: [
+              PageContainer(
+                child: Center(
+                  child: SkyscrapersImage(),
+                ),
+              ),
+              PageContainer(
+                child: Center(), // Another empty page
+              ),
+            ],
+          ),
         ),
       ),
     );

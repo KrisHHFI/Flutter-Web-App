@@ -21,7 +21,7 @@ class HeroBanner extends StatelessWidget {
         ),
         // Positioned text
         Positioned(
-          left: 50,
+          left: 100,
           top: screenSize.height / 2,
           child: const Text(
             'Lorem Ipsum',

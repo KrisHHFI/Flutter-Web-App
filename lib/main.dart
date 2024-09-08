@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               PageContainer(
+                backgroundColor: Colors.black,
                 child: Center(),
               ),
             ],

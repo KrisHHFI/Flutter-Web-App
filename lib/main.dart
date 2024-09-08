@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'widgets/page_container.dart';
 import 'widgets/hero_banner.dart';
 import 'widgets/single_text.dart';
+import 'widgets/single_text_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,14 @@ class MyApp extends StatelessWidget {
               ),
               PageContainer(
                 backgroundColor: Colors.black,
+                child: SingleTextList(
+                  text1: 'First Text',
+                  text2: 'Second Text',
+                  text3: 'Third Text',
+                  textColor: Colors.white,
+                ),
+              ),
+              PageContainer(
                 child: Center(),
               ),
             ],

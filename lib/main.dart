@@ -1,7 +1,7 @@
 // main.dart
 import 'package:flutter/material.dart';
 import 'widgets/page_container.dart';
-import 'widgets/skyscrapers_image.dart';
+import 'widgets/hero_banner.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
             children: [
               PageContainer(
                 child: Center(
-                  child: SkyscrapersImage(),
+                  child: HeroBanner(),
                 ),
               ),
               PageContainer(

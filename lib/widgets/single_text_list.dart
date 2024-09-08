@@ -17,40 +17,45 @@ class SingleTextList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final componentWidth = screenWidth * 0.5; // 50vw
+    final componentWidth = screenWidth * 0.3; // 50vw
 
-    return SizedBox(
-      width: componentWidth,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text1,
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: textColor, // Apply the text color
+    return Center(
+      child: Container(
+        width: componentWidth,
+        color: Colors.cyan, // Cyan background color
+        child: Column(
+          crossAxisAlignment:
+              CrossAxisAlignment.start, // Align text to the start
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text1,
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: textColor, // Apply the text color
+              ),
             ),
-          ),
-          const SizedBox(height: 16), // Add spacing between texts
-          Text(
-            text2,
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: textColor, // Apply the text color
+            const SizedBox(height: 16), // Add spacing between texts
+            Text(
+              text2,
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: textColor, // Apply the text color
+              ),
             ),
-          ),
-          const SizedBox(height: 16), // Add spacing between texts
-          Text(
-            text3,
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: textColor, // Apply the text color
+            const SizedBox(height: 16), // Add spacing between texts
+            Text(
+              text3,
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: textColor, // Apply the text color
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

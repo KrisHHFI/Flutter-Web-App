@@ -37,9 +37,9 @@ class MyApp extends StatelessWidget {
               PageContainer(
                 backgroundColor: Colors.black,
                 child: SingleTextList(
-                  text1: 'First Text',
-                  text2: 'Second Text',
-                  text3: 'Third Text',
+                  text1: 'Ut enim ad minim',
+                  text2: 'Quis nostrud',
+                  text3: 'Ullamco laboris',
                   textColor: Colors.white,
                 ),
               ),

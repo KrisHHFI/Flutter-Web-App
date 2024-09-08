@@ -13,23 +13,22 @@ class HeroBanner extends StatelessWidget {
         // Background image
         SizedBox(
           width: screenSize.width,
-          height:
-              screenSize.height, // Make the image fill the entire screen height
+          height: screenSize.height,
           child: const Image(
             image: AssetImage('images/Skyscrapers.png'),
-            fit: BoxFit.cover, // Make the image cover the entire container
+            fit: BoxFit.cover,
           ),
         ),
         // Positioned text
         Positioned(
-          left: 50, // Padding from the left
-          top: screenSize.height / 2, // Halfway down the screen
+          left: 50,
+          top: screenSize.height / 2,
           child: const Text(
             'Lorem Ipsum',
             style: TextStyle(
-              color: Colors.white, // White text color
-              fontSize: 80, // Large text
-              fontWeight: FontWeight.bold, // Bold text
+              color: Colors.white,
+              fontSize: 80,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),

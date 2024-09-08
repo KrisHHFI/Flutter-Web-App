@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/page_container.dart';
 import 'widgets/hero_banner.dart';
+import 'widgets/single_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,15 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               PageContainer(
-                child: Center(), // Another empty page
+                child: Center(
+                  child: SingleText(
+                    text:
+                        'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?',
+                  ),
+                ),
+              ),
+              PageContainer(
+                child: Center(),
               ),
             ],
           ),

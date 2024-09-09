@@ -16,7 +16,7 @@ class CustomCard extends StatelessWidget {
     return Center(
       // Center the card itself
       child: Container(
-        width: 400, // Fixed width
+        width: 300, // Fixed width
         height: 400, // Fixed height
         margin: const EdgeInsets.all(16.0),
         decoration: BoxDecoration(
@@ -43,7 +43,7 @@ class CustomCard extends StatelessWidget {
               ), // Rounded corners for the image
               child: Image.network(
                 imageUrl,
-                width: 400, // Fixed width
+                width: 300, // Fixed width
                 height: 250, // Adjusted image height
                 fit: BoxFit.cover,
               ),

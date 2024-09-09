@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
               PageContainer(
                 child: HeroBanner(
                   text: 'Lorem Ipsum',
-                  imageUrl: 'images/Skyscrapers.png',
+                  imageUrl:
+                      'images/Skyscrapers.png', // Credit: Pexels, Charles Parker, Glowing skyscrapers of megalopolis on shore of river (edited)
                 ),
               ),
               PageContainer(
@@ -87,10 +88,22 @@ class MyApp extends StatelessWidget {
               ),
               PageContainer(
                 unrestrictedHeight: true,
-                child: CustomCard(
-                  imageUrl: 'images/FinishedBuilding.jpg',
-                  text:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CustomCard(
+                      imageUrl:
+                          'images/Tools.jpg', // Credit: Pexels, Yavuz Eren Güngör, hardware
+                      text:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    ),
+                    CustomCard(
+                      imageUrl:
+                          'images/Cement.jpg', // Credit: Pexels, MILO TEXTURES, Concrete Wall
+                      text:
+                          'Duis aute irure dolor in reprehenderit in voluptate.',
+                    ),
+                  ],
                 ),
               ),
             ],

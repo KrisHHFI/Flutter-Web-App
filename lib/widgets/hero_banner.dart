@@ -12,8 +12,8 @@ class HeroBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get screen size using MediaQuery
     final screenSize = MediaQuery.of(context).size;
+    final isSmallScreen = screenSize.width <= 600;
 
     return Stack(
       children: [
@@ -26,19 +26,35 @@ class HeroBanner extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        // Positioned text
-        Positioned(
-          left: 100,
-          top: screenSize.height / 2,
-          child: Text(
-            text,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 80,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
+        // Text position and styling
+        isSmallScreen
+            ? Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Text(
+                    text,
+                    textAlign: TextAlign.center, // Center the text
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 50, // Smaller font size for small screens
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              )
+            : Positioned(
+                left: 100, // Original left padding for large screens
+                top: screenSize.height / 2, // Original vertical position
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 80, // Original font size for large screens
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
       ],
     );
   }

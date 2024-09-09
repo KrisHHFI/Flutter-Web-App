@@ -5,6 +5,7 @@ import 'widgets/hero_banner.dart';
 import 'widgets/single_text.dart';
 import 'widgets/text_list.dart';
 import 'widgets/text_and_Image.dart';
+import 'widgets/custom_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -78,16 +79,18 @@ class MyApp extends StatelessWidget {
               ),
               PageContainer(
                 backgroundColor: Colors.black,
+                unrestrictedHeight: true,
                 child: SingleText(
                   text: 'Consectetur adipiscing elit?',
                   textColor: Colors.white,
                 ),
               ),
               PageContainer(
-                backgroundColor: Colors.white,
                 unrestrictedHeight: true,
-                child: SingleText(
-                  text: 'Consectetur adipiscing elit?',
+                child: CustomCard(
+                  imageUrl: 'images/FinishedBuilding.jpg',
+                  text:
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                 ),
               ),
             ],

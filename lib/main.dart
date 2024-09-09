@@ -97,28 +97,31 @@ class MyApp extends StatelessWidget {
                     CustomCard(
                       imageUrl:
                           'images/Tools.jpg', // Credit: Pexels, Yavuz Eren Güngör, hardware
-                      text:
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      text: 'Lorem ipsum dolor sit amet, consectetur.',
                     ),
                     CustomCard(
                       imageUrl:
                           'images/Cement.jpg', // Credit: Pexels, MILO TEXTURES, Concrete Wall
-                      text:
-                          'Duis aute irure dolor in reprehenderit in voluptate.',
+                      text: 'Duis aute irure dolor in reprehenderit in.',
                     ),
                     CustomCard(
                       imageUrl:
                           'images/Tape.jpg', // Credit: Pexels, Marta Longas, Close-Up Photo of Yellow Tape Measure
-                      text:
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      text: 'Lorem ipsum dolor sit amet, consectetur.',
                     ),
                     CustomCard(
                       imageUrl:
                           'images/Paint.jpg', // Credit: Pexels, David Waschbüsch, Assorted-color Paint Buckets
-                      text:
-                          'Duis aute irure dolor in reprehenderit in voluptate.',
+                      text: 'Duis aute irure dolor in reprehenderit in.',
                     ),
                   ],
+                ),
+              ),
+              PageContainer(
+                backgroundColor: Colors.black,
+                child: SingleText(
+                  text: 'Excepteur sint occaecat...?',
+                  textColor: Colors.white,
                 ),
               ),
             ],

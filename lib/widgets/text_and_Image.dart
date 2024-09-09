@@ -14,42 +14,56 @@ class TextAndImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
-    final containerHeight = screenHeight * 0.9;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final isSmallScreen = constraints.maxWidth <= 600;
+        final containerHeight = isSmallScreen
+            ? constraints.maxHeight
+            : MediaQuery.of(context).size.height * 0.9;
 
-    // Build the image and text widgets
-    final imageWidget = Expanded(
-      flex: 1,
-      child: Image.network(
-        imageUrl,
-        height: containerHeight,
-        fit: BoxFit.cover,
-      ),
-    );
+        // Build the image and text widgets
+        final imageWidget = Expanded(
+          flex: 1,
+          child: Image.network(
+            imageUrl,
+            height: isSmallScreen ? double.infinity : containerHeight,
+            fit: BoxFit.cover,
+          ),
+        );
 
-    final textWidget = Expanded(
-      flex: 1,
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-        ),
-      ),
-    );
+        final textWidget = Expanded(
+          flex: 1,
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+        );
 
-    // Conditionally place image on the left or right
-    return Container(
-      height: containerHeight,
-      padding: const EdgeInsets.all(16.0),
-      width: 800,
-      child: Row(
-        children: imageOnLeft
-            ? [imageWidget, const SizedBox(width: 16), textWidget]
-            : [textWidget, const SizedBox(width: 16), imageWidget],
-      ),
+        // Conditionally place image on the left or right
+        return Container(
+          height: containerHeight,
+          padding: const EdgeInsets.all(16.0),
+          width: isSmallScreen ? double.infinity : 800,
+          child: isSmallScreen
+              ? Column(
+                  children: [
+                    imageWidget,
+                    const SizedBox(height: 16),
+                    textWidget,
+                  ],
+                )
+              : Row(
+                  children: imageOnLeft
+                      ? [imageWidget, const SizedBox(width: 16), textWidget]
+                      : [textWidget, const SizedBox(width: 16), imageWidget],
+                ),
+        );
+      },
     );
   }
 }

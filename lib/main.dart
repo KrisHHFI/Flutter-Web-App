@@ -65,6 +65,16 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
+              PageContainer(
+                child: Center(
+                  child: TextAndImage(
+                    text:
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+                    imageUrl:
+                        'images/FinishedBuilding.jpg', // Credit: Pexels, Vinicius A. Nascimento, Construção Civil
+                  ),
+                ),
+              ),
             ],
           ),
         ),

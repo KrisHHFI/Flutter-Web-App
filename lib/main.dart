@@ -48,17 +48,23 @@ class MyApp extends StatelessWidget {
                 child: Center(
                   child: TextAndImage(
                     text:
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+                    imageUrl:
+                        'images/BuildingSite.jpg', // Credit: Pexels, Vinicius A. Nascimento, Construção Civil
+                  ),
+                ),
+              ),
+              PageContainer(
+                child: Center(
+                  child: TextAndImage(
+                    imageOnLeft: true,
+                    text:
                         'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
                     imageUrl:
                         'images/Scaffolding.jpg', // Credit: Pexels, Darya Sannikova, Men on Brown Scaffolding
                   ),
                 ),
               ),
-              /*
-              PageContainer(
-                child: Center(),
-              ),
-              */
             ],
           ),
         ),

@@ -88,8 +88,11 @@ class MyApp extends StatelessWidget {
               ),
               PageContainer(
                 unrestrictedHeight: true,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                cardContainer: true,
+                child: Wrap(
+                  spacing: 16.0, // Space between cards horizontally
+                  runSpacing: 16.0, // Space between cards vertically
+                  alignment: WrapAlignment.start, // Align cards to the left
                   children: [
                     CustomCard(
                       imageUrl:

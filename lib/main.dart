@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'widgets/page_container.dart';
 import 'widgets/hero_banner.dart';
 import 'widgets/single_text.dart';
-import 'widgets/single_text_list.dart';
+import 'widgets/text_list.dart';
+import 'widgets/text_and_Image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,6 +42,15 @@ class MyApp extends StatelessWidget {
                   text2: 'Quis nostrud',
                   text3: 'Ullamco laboris',
                   textColor: Colors.white,
+                ),
+              ),
+              PageContainer(
+                child: Center(
+                  child: TextAndImage(
+                    text:
+                        'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?',
+                    imageUrl: '',
+                  ),
                 ),
               ),
               PageContainer(

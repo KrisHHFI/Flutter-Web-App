@@ -103,6 +103,18 @@ class MyApp extends StatelessWidget {
                       text:
                           'Duis aute irure dolor in reprehenderit in voluptate.',
                     ),
+                    CustomCard(
+                      imageUrl:
+                          'images/Tape.jpg', // Credit: Pexels, Marta Longas, Close-Up Photo of Yellow Tape Measure
+                      text:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    ),
+                    CustomCard(
+                      imageUrl:
+                          'images/Paint.jpg', // Credit: Pexels, David Waschbüsch, Assorted-color Paint Buckets
+                      text:
+                          'Duis aute irure dolor in reprehenderit in voluptate.',
+                    ),
                   ],
                 ),
               ),

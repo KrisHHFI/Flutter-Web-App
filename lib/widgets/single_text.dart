@@ -30,10 +30,10 @@ class SingleText extends StatelessWidget {
                 ? TextAlign.center
                 : TextAlign.left, // Center text if small screen
             style: TextStyle(
-              fontSize: 40, // Font size remains 40 for both screen sizes
+              fontSize: isSmallScreen ? 35 : 40,
               fontWeight: FontWeight.bold,
               fontStyle: FontStyle.italic,
-              color: textColor, // Apply the text color
+              color: textColor,
             ),
           ),
         ),

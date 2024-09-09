@@ -34,7 +34,8 @@ class HeroBanner extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Text(
                     text,
-                    textAlign: TextAlign.center, // Center the text
+                    textAlign:
+                        TextAlign.center, // Center the text for small screens
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 50, // Smaller font size for small screens
@@ -44,13 +45,13 @@ class HeroBanner extends StatelessWidget {
                 ),
               )
             : Positioned(
-                left: 100, // Original left padding for large screens
-                top: screenSize.height / 2, // Original vertical position
+                left: 100,
+                top: screenSize.height / 2,
                 child: Text(
                   text,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 80, // Original font size for large screens
+                    fontSize: 80,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

@@ -12,28 +12,34 @@ class TextAndImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final containerHeight = screenHeight * 0.9;
+
     return Container(
-      color: Colors.cyan,
+      height: containerHeight,
       padding: const EdgeInsets.all(16.0),
+      width: 800,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
+            flex: 1,
             child: Text(
               text,
+              textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 24,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),
             ),
           ),
-          const SizedBox(width: 16), // Add some spacing between text and image
-          Image.network(
-            imageUrl,
-            width: 100, // Set image width as desired
-            height: 100, // Set image height as desired
-            fit: BoxFit.cover,
+          const SizedBox(width: 16),
+          Expanded(
+            flex: 1,
+            child: Image.network(
+              imageUrl,
+              height: containerHeight,
+            ),
           ),
         ],
       ),

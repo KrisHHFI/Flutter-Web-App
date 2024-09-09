@@ -23,8 +23,9 @@ class MyApp extends StatelessWidget {
             // Stack the containers vertically
             children: [
               PageContainer(
-                child: Center(
-                  child: HeroBanner(),
+                child: HeroBanner(
+                  text: 'Lorem Ipsum',
+                  imageUrl: 'images/Skyscrapers.png',
                 ),
               ),
               PageContainer(
@@ -71,7 +72,7 @@ class MyApp extends StatelessWidget {
                     text:
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
                     imageUrl:
-                        'images/FinishedBuilding.jpg', // Credit: Pexels, Vinicius A. Nascimento, Construção Civil
+                        'images/FinishedBuilding.jpg', // Credit: Pexels, RDNE Stock project
                   ),
                 ),
               ),

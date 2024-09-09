@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HeroBanner extends StatelessWidget {
-  const HeroBanner({super.key});
+  final String text;
+  final String imageUrl;
+
+  const HeroBanner({
+    super.key,
+    required this.text,
+    required this.imageUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +21,8 @@ class HeroBanner extends StatelessWidget {
         SizedBox(
           width: screenSize.width,
           height: screenSize.height,
-          child: const Image(
-            image: AssetImage('images/Skyscrapers.png'),
+          child: Image.network(
+            imageUrl,
             fit: BoxFit.cover,
           ),
         ),
@@ -23,9 +30,9 @@ class HeroBanner extends StatelessWidget {
         Positioned(
           left: 100,
           top: screenSize.height / 2,
-          child: const Text(
-            'Lorem Ipsum',
-            style: TextStyle(
+          child: Text(
+            text,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 80,
               fontWeight: FontWeight.bold,

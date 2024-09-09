@@ -83,6 +83,13 @@ class MyApp extends StatelessWidget {
                   textColor: Colors.white,
                 ),
               ),
+              PageContainer(
+                backgroundColor: Colors.white,
+                unrestrictedHeight: true,
+                child: SingleText(
+                  text: 'Consectetur adipiscing elit?',
+                ),
+              ),
             ],
           ),
         ),

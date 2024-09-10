@@ -43,6 +43,8 @@ class _HomePageState extends State<HomePage> {
   final GlobalKey _pageKey6 = GlobalKey();
   final GlobalKey _pageKey7 = GlobalKey();
   final GlobalKey _pageKey8 = GlobalKey();
+  final GlobalKey _pageKey9 = GlobalKey();
+
   // Scroll to a specific PageContainer
   void _scrollToPage(GlobalKey key) {
     final context = key.currentContext;
@@ -74,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                 NavBar(
                   scrollToTop: () => _scrollToPage(_pageKey0),
                   scrollToAbout: () => _scrollToPage(_pageKey3),
-                  scrollToServices: () => _scrollToPage(_pageKey6),
+                  scrollToServices: () => _scrollToPage(_pageKey7),
                 ),
               ],
             ),
@@ -129,6 +131,16 @@ class _HomePageState extends State<HomePage> {
             ),
             PageContainer(
               key: _pageKey6,
+              child: Center(
+                child: TextAndImage(
+                  text:
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+                  imageUrl: 'images/FinishedBuilding.jpg',
+                ),
+              ),
+            ),
+            PageContainer(
+              key: _pageKey7,
               backgroundColor: Colors.black,
               unrestrictedHeight: true,
               child: SingleText(
@@ -137,7 +149,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
-              key: _pageKey7,
+              key: _pageKey8,
               unrestrictedHeight: true,
               cardContainer: true,
               child: Wrap(
@@ -165,7 +177,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
-              key: _pageKey8,
+              key: _pageKey9,
               backgroundColor: Colors.black,
               child: SingleText(
                 text: 'Excepteur sint occaecat...?',

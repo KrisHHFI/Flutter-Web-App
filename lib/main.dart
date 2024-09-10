@@ -6,6 +6,7 @@ import 'widgets/text_list.dart';
 import 'widgets/text_and_image.dart';
 import 'widgets/custom_card.dart';
 import 'widgets/nav_bar.dart';
+import 'widgets/footer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,8 +73,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 NavBar(
                   scrollToTop: () => _scrollToPage(_pageKey0),
-                  scrollTo200vh: () => _scrollToPage(_pageKey3),
-                  scrollTo400vh: () => _scrollToPage(_pageKey6),
+                  scrollToAbout: () => _scrollToPage(_pageKey3),
+                  scrollToServices: () => _scrollToPage(_pageKey6),
                 ),
               ],
             ),
@@ -170,6 +171,10 @@ class _HomePageState extends State<HomePage> {
                 text: 'Excepteur sint occaecat...?',
                 textColor: Colors.white,
               ),
+            ),
+            PageContainer(
+              unrestrictedHeight: true,
+              child: Footer(),
             ),
           ],
         ),

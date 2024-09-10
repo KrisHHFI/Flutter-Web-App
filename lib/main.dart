@@ -32,12 +32,26 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final ScrollController _scrollController = ScrollController();
 
-  void _scrollToPosition(double position) {
-    _scrollController.animateTo(
-      position,
-      duration: const Duration(seconds: 1),
-      curve: Curves.easeInOut,
-    );
+  // Define GlobalKeys for each PageContainer
+  final GlobalKey _pageKey0 = GlobalKey();
+  final GlobalKey _pageKey1 = GlobalKey();
+  final GlobalKey _pageKey2 = GlobalKey();
+  final GlobalKey _pageKey3 = GlobalKey();
+  final GlobalKey _pageKey4 = GlobalKey();
+  final GlobalKey _pageKey5 = GlobalKey();
+  final GlobalKey _pageKey6 = GlobalKey();
+  final GlobalKey _pageKey7 = GlobalKey();
+  final GlobalKey _pageKey8 = GlobalKey();
+  // Scroll to a specific PageContainer
+  void _scrollToPage(GlobalKey key) {
+    final context = key.currentContext;
+    if (context != null) {
+      Scrollable.ensureVisible(
+        context,
+        duration: const Duration(seconds: 1),
+        curve: Curves.easeInOut,
+      );
+    }
   }
 
   @override
@@ -50,24 +64,21 @@ class _HomePageState extends State<HomePage> {
             Stack(
               children: [
                 PageContainer(
+                  key: _pageKey0,
                   child: HeroBanner(
                     text: 'Lorem Ipsum',
                     imageUrl: 'images/Skyscrapers.png',
                   ),
                 ),
                 NavBar(
-                  scrollToTop: () =>
-                      _scrollToPosition(0), // Scroll to top (Home)
-                  scrollTo200vh: () => _scrollToPosition(
-                      MediaQuery.of(context).size.height *
-                          3), // Scroll to 200vh (About)
-                  scrollTo400vh: () => _scrollToPosition(
-                      MediaQuery.of(context).size.height *
-                          6.08), // Scroll to 600vh (Services)
+                  scrollToTop: () => _scrollToPage(_pageKey0),
+                  scrollTo200vh: () => _scrollToPage(_pageKey3),
+                  scrollTo400vh: () => _scrollToPage(_pageKey6),
                 ),
               ],
             ),
             PageContainer(
+              key: _pageKey1,
               backgroundColor: Colors.black,
               child: Center(
                 child: SingleText(
@@ -78,6 +89,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
+              key: _pageKey2,
               child: SingleTextList(
                 text1: 'Ut enim ad minim',
                 text2: 'Quis nostrud',
@@ -85,6 +97,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
+              key: _pageKey3,
               backgroundColor: Colors.black,
               unrestrictedHeight: true,
               child: SingleText(
@@ -93,6 +106,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
+              key: _pageKey4,
               child: Center(
                 child: TextAndImage(
                   text:
@@ -102,6 +116,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
+              key: _pageKey5,
               child: Center(
                 child: TextAndImage(
                   imageOnLeft: true,
@@ -112,15 +127,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
-              child: Center(
-                child: TextAndImage(
-                  text:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-                  imageUrl: 'images/FinishedBuilding.jpg',
-                ),
-              ),
-            ),
-            PageContainer(
+              key: _pageKey6,
               backgroundColor: Colors.black,
               unrestrictedHeight: true,
               child: SingleText(
@@ -129,6 +136,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
+              key: _pageKey7,
               unrestrictedHeight: true,
               cardContainer: true,
               child: Wrap(
@@ -156,6 +164,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PageContainer(
+              key: _pageKey8,
               backgroundColor: Colors.black,
               child: SingleText(
                 text: 'Excepteur sint occaecat...?',

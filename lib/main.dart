@@ -6,6 +6,7 @@ import 'widgets/single_text.dart';
 import 'widgets/text_list.dart';
 import 'widgets/text_and_Image.dart';
 import 'widgets/custom_card.dart';
+import 'widgets/nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,27 +24,39 @@ class MyApp extends StatelessWidget {
           child: Column(
             // Stack the containers vertically
             children: [
-              PageContainer(
-                child: HeroBanner(
-                  text: 'Lorem Ipsum',
-                  imageUrl:
-                      'images/Skyscrapers.png', // Credit: Pexels, Charles Parker, Glowing skyscrapers of megalopolis on shore of river (edited)
-                ),
+              Stack(
+                children: [
+                  PageContainer(
+                    child: HeroBanner(
+                      text: 'Lorem Ipsum',
+                      imageUrl: 'images/Skyscrapers.png', // Hero banner image
+                    ),
+                  ),
+                  NavBar(), // Positioned on top of HeroBanner
+                ],
               ),
               PageContainer(
+                backgroundColor: Colors.black,
                 child: Center(
                   child: SingleText(
                     text:
                         'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?',
+                    textColor: Colors.white,
                   ),
                 ),
               ),
               PageContainer(
-                backgroundColor: Colors.black,
                 child: SingleTextList(
                   text1: 'Ut enim ad minim',
                   text2: 'Quis nostrud',
                   text3: 'Ullamco laboris',
+                ),
+              ),
+              PageContainer(
+                backgroundColor: Colors.black,
+                unrestrictedHeight: true,
+                child: SingleText(
+                  text: 'Sed do eiusmod tempor?',
                   textColor: Colors.white,
                 ),
               ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TextAndImage extends StatelessWidget {
   final String text;
   final String imageUrl;
-  final bool imageOnLeft; // Optional value to position the image on the left
+  final bool imageOnLeft;
 
   const TextAndImage({
     super.key,

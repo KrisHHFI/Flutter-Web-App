@@ -16,23 +16,36 @@ class PageContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight =
+        unrestrictedHeight ? null : MediaQuery.of(context).size.height;
 
-    return Container(
-      width: double.infinity,
-      height: unrestrictedHeight ? null : MediaQuery.of(context).size.height,
-      color: backgroundColor,
-      child: cardContainer
-          ? Padding(
-              padding: EdgeInsets.fromLTRB(
-                screenWidth * 0.2, // 20vw padding left
-                30, // Top padding
-                screenWidth * 0.2, // 20vw padding right
-                30, // Bottom padding
-              ),
-              child: Center(child: child),
-            )
-          : child,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final isSmallScreen = constraints.maxWidth <= 600;
+
+        return Container(
+          width: double.infinity,
+          height: screenHeight,
+          color: backgroundColor,
+          child: cardContainer
+              ? Padding(
+                  padding: EdgeInsets.fromLTRB(
+                    isSmallScreen
+                        ? 16.0
+                        : constraints.maxWidth *
+                            0.2, // Adjust padding for small screens
+                    30, // Top padding
+                    isSmallScreen
+                        ? 16.0
+                        : constraints.maxWidth *
+                            0.2, // Adjust padding for small screens
+                    30, // Bottom padding
+                  ),
+                  child: Center(child: child),
+                )
+              : child,
+        );
+      },
     );
   }
 }

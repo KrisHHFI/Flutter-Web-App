@@ -24,13 +24,10 @@ class NavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              'Logo',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+            Image.network(
+              'images/Logo.png', // Replace with your actual image path
+              height: 30, // Set the desired height for the logo
+              fit: BoxFit.contain,
             ),
             Row(
               children: [

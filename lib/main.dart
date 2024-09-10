@@ -70,7 +70,8 @@ class _HomePageState extends State<HomePage> {
                   key: _pageKey0,
                   child: HeroBanner(
                     text: 'Lorem Ipsum',
-                    imageUrl: 'images/Skyscrapers.png',
+                    imageUrl:
+                        'images/Skyscrapers.png', // Credit: Pexels, Charles Parker, Glowing skyscrapers of megalopolis on shore of river (edited)
                   ),
                 ),
                 NavBar(
@@ -114,7 +115,8 @@ class _HomePageState extends State<HomePage> {
                 child: TextAndImage(
                   text:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-                  imageUrl: 'images/BuildingSite.jpg',
+                  imageUrl:
+                      'images/BuildingSite.jpg', // Credit: Pexels, Vinicius A. Nascimento, Construção Civil
                 ),
               ),
             ),
@@ -125,7 +127,8 @@ class _HomePageState extends State<HomePage> {
                   imageOnLeft: true,
                   text:
                       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-                  imageUrl: 'images/Scaffolding.jpg',
+                  imageUrl:
+                      'images/Scaffolding.jpg', // Credit: Pexels, Darya Sannikova, Men on Brown Scaffolding
                 ),
               ),
             ),
@@ -135,7 +138,8 @@ class _HomePageState extends State<HomePage> {
                 child: TextAndImage(
                   text:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-                  imageUrl: 'images/FinishedBuilding.jpg',
+                  imageUrl:
+                      'images/FinishedBuilding.jpg', // Credit: Pexels, RDNE Stock project
                 ),
               ),
             ),
@@ -158,19 +162,23 @@ class _HomePageState extends State<HomePage> {
                 alignment: WrapAlignment.start,
                 children: [
                   CustomCard(
-                    imageUrl: 'images/Tools.jpg',
+                    imageUrl:
+                        'images/Tools.jpg', // Credit: Pexels, Yavuz Eren Güngör, hardware
                     text: 'Lorem ipsum dolor sit amet, consectetur.',
                   ),
                   CustomCard(
-                    imageUrl: 'images/Cement.jpg',
+                    imageUrl:
+                        'images/Cement.jpg', // Credit: Pexels, MILO TEXTURES, Concrete Wall
                     text: 'Duis aute irure dolor in reprehenderit in.',
                   ),
                   CustomCard(
-                    imageUrl: 'images/Tape.jpg',
+                    imageUrl:
+                        'images/Tape.jpg', // Credit: Pexels, Marta Longas, Close-Up Photo of Yellow Tape Measure
                     text: 'Lorem ipsum dolor sit amet, consectetur.',
                   ),
                   CustomCard(
-                    imageUrl: 'images/Paint.jpg',
+                    imageUrl:
+                        'images/Paint.jpg', // Credit: Pexels, David Waschbüsch, Assorted-color Paint Buckets
                     text: 'Duis aute irure dolor in reprehenderit in.',
                   ),
                 ],

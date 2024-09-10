@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                           3), // Scroll to 200vh (About)
                   scrollTo400vh: () => _scrollToPosition(
                       MediaQuery.of(context).size.height *
-                          6), // Scroll to 400vh (Services)
+                          6.08), // Scroll to 600vh (Services)
                 ),
               ],
             ),
